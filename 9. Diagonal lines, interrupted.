@@ -1,0 +1,28 @@
+int border = 20;
+
+void setup() {
+  size(400,400);
+  background(0,0,0);
+}
+
+void draw() {
+  strokeWeight(1); // weight of the stroke
+  stroke(255); // color of the stroke (r,g,b)
+  
+  int i = border;
+  while (i < (width-border)) {
+    line(i,border,border,i); // x, y, x2 , y2 
+    i = i + 5;
+  }
+  
+  int j = width;
+  while (j > border) {
+    line(width-border,j-border,j-border,height-border);
+    j = j - 5;
+  }
+  
+textSize(300);
+text("P", 120, 300); 
+fill(0, 0, 0); 
+  
+}
